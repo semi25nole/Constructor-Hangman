@@ -19,14 +19,17 @@ var word = new Word("Ardvark");
 //Need to create a for loop to check the guess with the letters in the word to find a match
 //Create an if/else function to check if the guess is equal to the word; if not, append the letter to the random.txt
 function game () {
-    for (var i = 0; i > word.first.length; i++) {
-        if (guess === word.first.length[i]) {
-            console.log(guess);
+    var array = word.first.split("");
+    for (var i = 0; i > array.length; i++) {
+        var happy = array[i].indexOf(guess);
+        if (happy > -1) {
+            console.log(missed.push(guess));
+            console.log('this is your : ' + guess); //this will console log the word guessed by the user
         } else {
             console.log('error');
         }
     }
-};
+}
 
 game();
 
